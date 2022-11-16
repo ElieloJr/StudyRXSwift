@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     private var viewModel = ViewModel()
     private var bag = DisposeBag()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: self.view.frame, style: .insetGrouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -23,7 +24,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
+        self.title = "Users"
+        self.view.addSubview(tableView)
+        
         viewModel.fetchUsers()
         bindTableView()
         setupUI()
@@ -40,9 +43,24 @@ class ViewController: UIViewController {
     }
     
     func setupUI() {
+        // MARK: CLICAR
         tableView.rx.modelSelected(User.self).bind { user in
             print(user)
         }.disposed(by: bag)
+        
+        tableView.rx.itemSelected.subscribe(onNext: { indexPath in
+            print(indexPath.row)
+        }).disposed(by: bag)
+        
+        // MARK: DELETAR
+        tableView.rx.itemDeleted.subscribe(onNext: { [weak self] indexPath in
+            guard let self = self else { return }
+            self.viewModel.deleteUser(index: indexPath.row)
+        }).disposed(by: bag)
+        
+        // MARK: EDITAR
+        
+        
     }
     
 }

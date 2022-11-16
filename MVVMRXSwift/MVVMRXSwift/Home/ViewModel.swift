@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class ViewModel {
     var users = BehaviorSubject(value: [User]())
@@ -24,5 +25,19 @@ class ViewModel {
             }
         }
         task.resume()
+    }
+    
+    func addUser(user: User) {
+        
+    }
+    
+    func deleteUser(index: Int) {
+        guard var users = try? users.value() else { return }
+        users.remove(at: index)
+        self.users.on(.next(users))
+    }
+    
+    func editUser(title: String, index: Int) {
+        
     }
 }
