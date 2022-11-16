@@ -15,6 +15,8 @@
 		293FE0D029250894009F10B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293FE0CF29250894009F10B7 /* Assets.xcassets */; };
 		293FE0D329250894009F10B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293FE0D129250894009F10B7 /* LaunchScreen.storyboard */; };
 		29D99F64292513360067C4D4 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D99F63292513360067C4D4 /* UserTableViewCell.swift */; };
+		29D99F6629251B160067C4D4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D99F6529251B160067C4D4 /* ViewModel.swift */; };
+		29D99F6829251B4D0067C4D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D99F6729251B4D0067C4D4 /* User.swift */; };
 		F41559DFFFFB8CCBA2DED6AD /* Pods_MVVMRXSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A9DC770A8D870176702B6 /* Pods_MVVMRXSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		293FE0D229250894009F10B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		293FE0D429250894009F10B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29D99F63292513360067C4D4 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		29D99F6529251B160067C4D4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		29D99F6729251B4D0067C4D4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4F5057DB363CCD344CDB9929 /* Pods-MVVMRXSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRXSwift.debug.xcconfig"; path = "Target Support Files/Pods-MVVMRXSwift/Pods-MVVMRXSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		B0ADB66507243CEA48E220CC /* Pods-MVVMRXSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRXSwift.release.xcconfig"; path = "Target Support Files/Pods-MVVMRXSwift/Pods-MVVMRXSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,17 +71,43 @@
 		293FE0C229250893009F10B7 /* MVVMRXSwift */ = {
 			isa = PBXGroup;
 			children = (
+				29D99F6B29251BD30067C4D4 /* Cell */,
+				29D99F6A29251BAC0067C4D4 /* Home */,
+				29D99F6929251B920067C4D4 /* Data */,
 				293FE0C329250893009F10B7 /* AppDelegate.swift */,
 				293FE0C529250893009F10B7 /* SceneDelegate.swift */,
-				293FE0C729250893009F10B7 /* ViewController.swift */,
 				293FE0C929250893009F10B7 /* Main.storyboard */,
 				293FE0CF29250894009F10B7 /* Assets.xcassets */,
 				293FE0D129250894009F10B7 /* LaunchScreen.storyboard */,
 				293FE0D429250894009F10B7 /* Info.plist */,
 				293FE0CC29250893009F10B7 /* MVVMRXSwift.xcdatamodeld */,
-				29D99F63292513360067C4D4 /* UserTableViewCell.swift */,
 			);
 			path = MVVMRXSwift;
+			sourceTree = "<group>";
+		};
+		29D99F6929251B920067C4D4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				29D99F6729251B4D0067C4D4 /* User.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		29D99F6A29251BAC0067C4D4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				293FE0C729250893009F10B7 /* ViewController.swift */,
+				29D99F6529251B160067C4D4 /* ViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		29D99F6B29251BD30067C4D4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				29D99F63292513360067C4D4 /* UserTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		585595F89E14CFF63E995D0B /* Pods */ = {
@@ -216,7 +246,9 @@
 				293FE0CE29250893009F10B7 /* MVVMRXSwift.xcdatamodeld in Sources */,
 				293FE0C429250893009F10B7 /* AppDelegate.swift in Sources */,
 				293FE0C629250893009F10B7 /* SceneDelegate.swift in Sources */,
+				29D99F6629251B160067C4D4 /* ViewModel.swift in Sources */,
 				29D99F64292513360067C4D4 /* UserTableViewCell.swift in Sources */,
+				29D99F6829251B4D0067C4D4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
