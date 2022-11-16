@@ -28,7 +28,9 @@ class ViewModel {
     }
     
     func addUser(user: User) {
-        
+        guard var users = try? users.value() else { return }
+        users.insert(user, at: 0)
+        self.users.on(.next(users))
     }
     
     func deleteUser(index: Int) {
@@ -38,6 +40,8 @@ class ViewModel {
     }
     
     func editUser(title: String, index: Int) {
-        
+        guard var users = try? users.value() else { return }
+        users[index].title = title
+        self.users.on(.next(users))
     }
 }

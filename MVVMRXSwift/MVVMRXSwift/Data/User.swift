@@ -8,8 +8,10 @@
 import Foundation
 
 struct User: Codable {
-    let userID, id: Int
-    let title, body: String
+    let userID: Int
+    let id: Int
+    var title: String
+    let body: String
     
     enum CodingKeys: String, CodingKey {
         case userID = "userId"
