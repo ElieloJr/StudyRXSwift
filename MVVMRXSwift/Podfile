@@ -7,5 +7,6 @@ target 'MVVMRXSwift' do
   
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources', '~> 5.0'
 
 end
